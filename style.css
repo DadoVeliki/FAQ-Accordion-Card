@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: visible;
+}
+body{
+    font-family: Kumbh Sans;
+    min-height: 100vh;
+    width:100%;
+    background: linear-gradient(
+        hsl(273,75%,66%),
+        hsl(240,73%,65%)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.velikicontainer{
+    z-index: -1;
+}
+a{
+    color:white;
+}
+.faq{
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+.container{
+    background-color: white;
+    border-radius: 15px;
+    height: 550px;
+    max-width:950px;
+    display: flex;
+    overflow: hidden;
+}
+.pitanja{
+    width:50vw;
+    float: left;
+}
+.slike{
+    width:50vw;
+    float: left;
+    position: relative;
+}
+
+summary:hover{
+    color:hsl(14, 88%, 65%);
+}
+.strelica{
+    float:right;
+    padding-right: 20px;
+
+}
+details > summary {
+    list-style: none;
+  }
+
+summary{
+    margin-bottom: 20px;
+    
+}
+hr{
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+p{
+    color:grey;
+    font-size:small;
+    width:95%;
+}
+
+.sl4,.sl5{
+    display: none;
+}
+.sl1{
+    position:absolute;
+    width:500px;
+    margin-left:-120px;
+    margin-top:100px;
+    z-index: 1;
+}
+.sl2{
+    position:absolute;
+    margin-left: -90px;
+    margin-top:100px;
+    z-index: 2;
+}
+.sl3{
+    position:absolute;
+    top:420px;
+    left:390px;
+    width: 200px;
+    z-index: 3;
+}
+@media (max-width:500px){
+    .sl1,.sl2,.sl3{
+        visibility: hidden;
+    }
+    .sl5{
+        position: absolute;
+        display: block;
+        margin-top:-150px;
+        margin-left:30px;
+        z-index: 1000;
+    }
+    .sl5{
+        width:50%;
+        height: 50%;
+        top:40px;
+        left:90px;
+    }
+    .container{
+        height:70vh;
+        width:85vw;
+        flex-direction: column;
+        margin-left:10vw;
+        margin-right:10vw;
+        border-radius: 30px;
+    }
+    .pitanja{
+        margin-top:100px;
+        flex-direction: column;
+        width:100%;
+        padding-left: 20px;
+    }
+    .slike{
+        flex-direction: column;
+        width:100%;
+    }
+    div.attribution{
+        visibility: hidden;
+    }
+    .faq{
+        text-align: center;
+    }
+    p{
+        width:90%;
+    }
+}
